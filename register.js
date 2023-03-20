@@ -38,12 +38,12 @@ submitButton.addEventListener('click', (event) => {
   }
 
   if (validatePassword(passwordInput.value) === false) {
-    errorText.innerHTML = 'Password doesnt hard enough!';
+    errorText.innerHTML = 'Password must contain at least 8 characters including at least one uppercase letter, one lowercase letter, and one digit.';
     return;
   }
 
   if (validatePhone(phoneNumberInput.value) === false) {
-    errorText = 'Your phone namber from wild world or try write down it as "+000-000-00-00"';
+    errorText.innerHTML = 'Your phone namber from wild world or try write down it as "+000-000-00-00"';
     return;
   }
 
@@ -71,27 +71,6 @@ function validateEmail(email) {
     emailError.textContent = '';
   });
 
-  function validatePassword(password) {
-    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
-    return passwordRegex.test(password);
-  }
-  
-
-  const passwordError = document.getElementById('passwordError');
-  
-  passwordInput.addEventListener('blur', () => {
-    const password = passwordInput.value;
-    if (password === '') {
-      passwordError.textContent = 'Password is required.';
-      return;
-    }
-    if (!validatePassword(password)) {
-      passwordError.textContent = 'Password must contain at least 8 characters including at least one uppercase letter, one lowercase letter, and one digit.';
-      return;
-    }
-    passwordError.textContent = '';
-  });
-  
   function validatePassword(password) {
     const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
     return passwordRegex.test(password);
