@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css"> 
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="registerFormContainer">
+        <h1 class="title">
+            Create Account
+        </h1>
+        <div class="forms">
+            <div class="form">
+                <input type="text" name="name" id="name">
+                <label for="name" id="label" >Full Name:</label>
+                <img src="person.png" alt="" class="icon">
+            </div>
+            <div class="form">
+                <input type="email" name="mail" id="mail">
+                <label for="mail" id="label" >Email Adress:</label>
+                <img src="mail.png" alt="" class="icon">
+            </div>
+            <div class="form">
+                <input type="tel" name="phone" id="phone">
+                <label for="phone" id="label" >Phone Number:</label>
+                <img src="phone.png" alt="" class="icon">
+            </div>
+            <div class="form">
+                <input type="password" name="pass" id="pass">
+                <p id="passwordError"></p>
+                <label for="pass" id="label" >Password:</label>
+                <img src="password.png" alt="" class="icon">
+            </div>
+            <div class="form">
+                <input type="password" name="passConf" id="passConf">
+                <label for="passConf" id="label" >Confirm Password:</label>
+                <img src="tic.jpg" alt="" class="icon">
+            </div>
+            <div class="form">
+                <p><input type="checkbox" name="checkBox" id="checkBox">Agree with <b>Terms & Conditions</b></p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="button">Create Account</button>
+            <p class="error"></p>
+            <p>Allredy have an account? <a href="#" class="button">Login</a></p>
+        </div>
+        
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>
