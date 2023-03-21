@@ -54,22 +54,6 @@ function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
-  
- 
-  const emailError = document.getElementById('emailError');
-  
-  emailInput.addEventListener('blur', () => {
-    const email = emailInput.value.trim();
-    if (email === '') {
-      emailError.textContent = 'Email address is required.';
-      return;
-    }
-    if (!validateEmail(email)) {
-      emailError.textContent = 'Please enter a valid email address.';
-      return;
-    }
-    emailError.textContent = '';
-  });
 
   function validatePassword(password) {
     const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
